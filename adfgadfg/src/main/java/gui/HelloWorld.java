@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import domain.Message;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.util.HashMap;
@@ -16,6 +19,12 @@ public class HelloWorld extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		HashMap<String,String> hm=new
+				HashMap<String,String>();
+				hm.put("eu", "Kaixo Mundua");
+				hm.put("es", "Hola Mundo");
+				Message m=new Message ("hello world",hm);
+				
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
